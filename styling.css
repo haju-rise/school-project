@@ -1,0 +1,19 @@
+.child {
+    display;
+    border-color: solid blue;
+    border-width: 2px;
+}
+
+h1 {
+    color: #0000ff;
+}
+
+h2{
+    color: grey;
+}
+
+.label {
+    margin: 4px;
+}
+
+
