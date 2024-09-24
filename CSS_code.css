@@ -8,13 +8,24 @@ body {
 
 /* Header section */
 header {
-  background-color: #040761;
-  color: white;
-  padding: 20px;
-  text-align: center; 
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 10px 20px; 
+  background-color: #040544; /* Optional: Change header background color */
+  position: relative;
 }
 
-/* Navigation menu */
+/* Center the text */
+.header_text {
+  text-align: center;
+  color: #fbfcfc;
+  font-size: 24px; /* Adjust the size as needed */
+  font-weight: bold;
+ 
+}
+
 nav {
   background-color: #333;
 }
@@ -58,6 +69,11 @@ button {
   cursor: pointer;
 }
 
+
+/* Place the logo on the right */
+.logo_container {
+  flex-shrink: 0; /* Ensure the logo doesn't shrink */
+}
 button:hover {
   background-color: #45a049;
 }
