@@ -13,33 +13,68 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="CSS_code.css">
   <style>
-    /* Apply logo as background to the body */
-    body {
-        background-image: url('Logo-2.jpg');
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: contain;
-        min-height: 100vh; /* Ensures background covers the viewport */
+    /* Styling for header */
+    header {
+        display: flex;
+        justify-content: space-between; /* Logo on right, text on left/center */
+        align-items: center;
+        padding: 10px 20px;
+        background-color: #0a124d;
+    }
+    .header_text {
+            text-align: center;
+            flex-grow: 1;
+            color: #f6f4f4; 
+            font-size: 24px; 
+            font-weight: bold;
+          }   
+    
+    
+    /* Styling the logo */
+    .logo {
+            display: block;
+            height: 120px; /* Adjust the height as needed */
+            background: none;
+            border: none;
+            margin: 0;
+            padding: 0;
+    }
+    .logo_container {
+            background: none;
+            border: none;
+            margin-left: auto;
+            padding: 0;
+            flex-shrink: 0; /* Prevent the logo container from shrinking */
+        }
+
+    
+    /* Remove underline from the link and add hover effect */
+    a.logo-link {
+        text-decoration: none;
     }
 
-    /* Alternatively, apply to a specific section */
-    #logo-section {
-        background-image: url('Logo-2.jpg');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
-        height: 500px; /* Adjust as needed */
-        width: 100%;
+    a.logo-link:hover {
+        opacity: 0.8;
     }
 </style>
 </head>
+</html>
 <body>
   <!-- Header Section -->
   <header>
-    <div class="container">
+    <div class="header_text">
       <h1>Welcome to Unique Public School</h1>
       <p>Education for a better future</p>
+      
     </div>
+    <div class="logo_container">
+          <!-- The anchor tag links to the homepage -->
+          <a href="/" class="logo-link">
+              <!-- Logo image -->
+              <img src="logo.jpg" alt="Logo" class="logo">
+          </a>
+    </div>
+      </body>
   </header>
 
   <!-- Navigation Menu -->
@@ -54,12 +89,37 @@
       </ul>
     </div>
   </nav>
-
+  <main>
+    <h1>Sign Up</h1>
+    <form>
+      <div>
+        <label for="user_first_name">First Name</label><br>
+       <input type="text" id="user_first_name" name="user_first_name">
+      </div>
+      <div>
+        <label for="user_last_name">Last Name</label><br>
+       <input type="text" id="user_last_name" name="user_last_name">
+      </div>
+      <div>
+        <label for="user_email">Email</label><br>
+       <input type="email" id="user_email" name="user_email">
+      </div>
+      <div>
+        <label for="user_password">Password</label><br>
+        <input type="password" id="user_password" name="user_password">
+      </div>
+      <div>
+        <label for="user_confirm_password">Confirm Password</label><br>
+        <input type="password" id="user_confirm_password" name="user_confirm_password">
+      </div>
+      <div>
+        <button type="submit">Sign Up</button><br>
+      </div>
+    </form>
+  </main>
   <!-- Main Content Section -->
   <div class="container">
     <section>
-      <h2>About Our School</h2>
-      <p>Our school provides excellent education, fostering growth and creativity in a supportive environment. We offer a wide range of academic and extracurricular activities to ensure that our students thrive.</p>
       <button onclick="displayMessage()">Learn More</button>
     </section>
   </div>
